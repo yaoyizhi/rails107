@@ -47,7 +47,7 @@ class GroupsController < ApplicationController
 
     def find_group_check_permission
         @group = Group.find(params[:id])
-        if @group.user != current_user
+        if current_user != @group.user
             redirect_to root_path
             flash[:alert] = 'You have no permission'
         end
