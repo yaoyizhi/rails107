@@ -12,5 +12,6 @@ Rails.application.routes.draw do
     end
     namespace :account do
         resources :groups
+        resources :posts
     end
 end
